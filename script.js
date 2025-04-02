@@ -15,7 +15,7 @@ async function fetchGitHubProfile() {
     loading.style.display = "block";
 
     try {
-        const response = await fetch(`https://github-api-0gjy.onrender.com/github/${username}`);
+        const response = await fetch(`github-api-sigma-ochre.vercel.app/github/${username}`);
         const data = await response.json();
 
         loading.style.display = "none";
