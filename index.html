@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>GitHub Profile Explorer</h1>
+                <p>Discover any GitHub user's profile in seconds</p>
+            </div>
+            <div class="card-body">
+                <div class="search-box">
+                    <input type="text" id="username" placeholder="Enter GitHub username...">
+                    <button onclick="fetchGitHubProfile()">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+                
+                <div class="loading" id="loading">
+                    <div class="loading-spinner"></div>
+                </div>
+                
+                <div id="error-message">
+                    <i class="fas fa-exclamation-circle"></i> User not found. Please check the username and try again.
+                </div>
+                
+                <div id="profile-card">
+                    <div class="profile-header">
+                        <div class="avatar-container">
+                            <img id="avatar" src="" alt="Profile Picture">
+                        </div>
+                        <h2 class="profile-name" id="name"></h2>
+                        <p class="profile-bio" id="bio"></p>
+                    </div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-value" id="repos"></div>
+                            <div class="stat-label">Repositories</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="followers"></div>
+                            <div class="stat-label">Followers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="following"></div>
+                            <div class="stat-label">Following</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" target="_blank" class="profile-link" id="profile-link">
+                        <i class="fab fa-github"></i> View Full Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
